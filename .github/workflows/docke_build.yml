@@ -28,8 +28,12 @@ jobs:
         with:
           context: ./
           push: true
-          # dockerfile: ./Dockerfile
-          tags: moisesgc/webacademy:latest
+          tags: jheandev/webacademy:latest
+
+      - name: Upload coverage reports to Codecov
+        uses: codecov/codecov-action@v5
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
 
   deploy:
     runs-on: ubuntu-latest
