@@ -28,7 +28,8 @@ jobs:
         with:
           context: ./
           push: true
-          tags: jheandev/webacademy:latest
+          tags: jheanrabelo/webacademy:latest
+          dockerfile: ./Dockerfile
 
       - name: Upload coverage reports to Codecov
         uses: codecov/codecov-action@v5
