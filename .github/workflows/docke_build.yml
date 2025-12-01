@@ -26,10 +26,9 @@ jobs:
       - name: Build and push Docker image
         uses: docker/build-push-action@v5
         with:
-          context: ./
+          context: ./lab03_docker
           push: true
           tags: jheanrabelo/webacademy:latest
-          dockerfile: ./Dockerfile
 
       - name: Upload coverage reports to Codecov
         uses: codecov/codecov-action@v5
